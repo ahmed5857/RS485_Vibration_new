@@ -1664,24 +1664,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _UART_vidSend `(v ~T0 @X0 1 ef2`C*uc`Cus ]
 "59
 {
-[; ;UART_m.c: 58: void UART_vidSend(unsigned char* const data,const unsigned short Len)
+[; ;UART_m.c: 58: void UART_vidSend(unsigned char* const data,const unsigned short Length)
 [; ;UART_m.c: 59: {
 [e :U _UART_vidSend ]
 [v F1608 `*uc ~T0 @X0 1 t ]
 "58
 [v _data `C*uc ~T0 @X0 1 r1 ]
-[v _Len `Cus ~T0 @X0 1 r2 ]
+[v _Length `Cus ~T0 @X0 1 r2 ]
 "59
 [f ]
 "60
 [v _UART_u16Index `us ~T0 @X0 1 a ]
 [; ;UART_m.c: 60: unsigned short UART_u16Index = 0;
 [e = _UART_u16Index -> -> 0 `i `us ]
-[; ;UART_m.c: 62: for(UART_u16Index = 0; UART_u16Index < Len; UART_u16Index++)
+[; ;UART_m.c: 62: for(UART_u16Index = 0; UART_u16Index < Length; UART_u16Index++)
 "62
 {
 [e = _UART_u16Index -> -> 0 `i `us ]
-[e $ < -> _UART_u16Index `ui -> _Len `ui 144  ]
+[e $ < -> _UART_u16Index `ui -> _Length `ui 144  ]
 [e $U 145  ]
 "63
 [e :U 144 ]
@@ -1701,7 +1701,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 "62
 [e ++ _UART_u16Index -> -> 1 `i `us ]
-[e $ < -> _UART_u16Index `ui -> _Len `ui 144  ]
+[e $ < -> _UART_u16Index `ui -> _Length `ui 144  ]
 [e :U 145 ]
 "66
 }

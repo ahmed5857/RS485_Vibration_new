@@ -2046,96 +2046,20 @@ void UART_vidSend(unsigned char* const data,const unsigned short Len);
 
 void UART_vidReceive(unsigned char* data);
 
-# 22 "main.c"
-char IDDV =0;
-
-
-void I2CInit(void);
-void I2CStart();
-void I2CStop();
-void I2CRestart();
-void I2CAck();
-void I2CNak();
-void I2CWait();
-void I2CSend(unsigned char dat);
-unsigned char I2CRead(void);
-char E_Write(int addr, unsigned char ch);
-unsigned char E_Read(int addr);
-
-void ini_adxl345()
-{
-E_Write(56,0x9f);
-_delay((unsigned long)((10)*(20000000/4000.0)));
-E_Write(49,0x09);
-_delay((unsigned long)((10)*(20000000/4000.0)));
-E_Write(44,0x0d);
-_delay((unsigned long)((10)*(20000000/4000.0)));
-E_Write(45,0x08);
-}
+# 10 "main.c"
 void system_init(void);
 
 
 void main(void)
 {
-int id, pow, bw_rate;
-signed long x,y,z;
-signed long xhi,xlo,yhi,ylo,zhi,zlo;
-signed long Xaccumulate, Yaccumulate, Zaccumulate;
-unsigned char Xaverage, Yaverage, Zaverage;
-int i;
-
 system_init();
 UART_vidInit();
 
-
-I2CInit();
-
-ini_adxl345();
-
-id = E_Read(IDDV);
-_delay((unsigned long)((10)*(20000000/4000.0)));
-pow = E_Read(0x2D);
-_delay((unsigned long)((10)*(20000000/4000.0)));
-bw_rate = E_Read(0x2C);
-
-
 while(1)
 {
-Xaccumulate = Yaccumulate = Zaccumulate = 0;
-
-for (i = 0; i < 16; i++)
-{
-I2CStart();
-I2CSend(0xA6);
-I2CSend(50);
-I2CRestart();
-I2CSend(0xA7);
-xlo = I2CRead();
-I2CAck();
-xhi = I2CRead();
-I2CAck();
-ylo = I2CRead();
-I2CAck();
-yhi = I2CRead();
-I2CAck();
-zlo = I2CRead();
-I2CAck();
-zhi = I2CRead();
-I2CNak();
-I2CStop();
-
-
-Xaccumulate += ((xhi<<8) | xlo);
-Yaccumulate += ((yhi<<8) | ylo);
-Zaccumulate += ((zhi<<8) | zlo);
-}
-Xaverage = (unsigned char)(Xaccumulate / 16);
-Yaverage = (unsigned char) (Yaccumulate / 16);
-Zaverage = (unsigned char) (Zaccumulate / 16);
-
-(Data_Buffer.X = Xaverage);
-(Data_Buffer.Y = Yaverage);
-(Data_Buffer.Z = Zaverage);
+(Data_Buffer.X = 0x55);
+(Data_Buffer.Y = 0xAA);
+(Data_Buffer.Z = 0x88);
 (Data_Buffer.T = 0x66);
 (Data_Buffer.SwitchStatus = 1);
 (Data_Buffer.ID = 0x35);
@@ -2149,125 +2073,4 @@ TRISC0 = 0;
 TRISA = 0xFF;
 ADCON0 = 0x00;
 ANSEL = 0x00;
-}
-
-# 132
-void I2CInit(void)
-{
-TRISCbits.TRISC3 = 1;
-TRISCbits.TRISC4 = 1;
-SSPSTAT |= 0x80;
-SSPCON = 0x28;
-
-SSPCON2 = 0x00;
-SSPADD = 49;
-PIR1bits.SSPIF = 0;
-PIR2bits.BCLIF = 0;
-
-# 152
-}
-
-# 160
-void I2CStart()
-{
-SEN = 1;
-while(SEN);
-
-}
-
-# 173
-void I2CStop()
-{
-PEN = 1;
-while(PEN);
-
-}
-
-# 186
-void I2CRestart()
-{
-RSEN = 1;
-while(RSEN);
-}
-
-# 198
-void I2CAck()
-{
-ACKDT = 0;
-ACKEN = 1;
-while(ACKEN);
-}
-
-# 211
-void I2CNak()
-{
-ACKDT = 1;
-ACKEN = 1;
-while(ACKEN);
-}
-
-# 224
-void I2CWait()
-{
-while ((SSPCON2 & 0x1F ) || ( SSPSTAT & 0x04 ) );
-
-}
-
-# 237
-void I2CSend(unsigned char dat)
-{
-SSPBUF = dat;
-while(BF);
-I2CWait();
-}
-
-# 250
-unsigned char I2CRead(void)
-{
-unsigned char temp;
-
-RCEN = 1;
-while(!BF);
-temp = SSPBUF;
-I2CWait();
-return temp;
-}
-
-
-
-char E_Write(int addr, unsigned char ch)
-{
-
-I2CStart();
-
-I2CSend(0xA6);
-
-I2CSend(addr);
-
-I2CSend(ch);
-
-I2CStop();
-return 1;
-}
-
-
-
-unsigned char E_Read(int addr)
-{
-unsigned char ch;
-
-I2CStart();
-
-I2CSend(0xA6);
-
-I2CSend(addr);
-
-I2CRestart();
-
-I2CSend(0xA7);
-
-ch = I2CRead();
-I2CNak();
-I2CStop();
-return ch;
 }
