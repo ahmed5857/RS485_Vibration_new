@@ -20,9 +20,15 @@ typedef union
         unsigned char SwitchStatus : 1;
         unsigned char AVG_Vibration : 8;
         unsigned char T;
-		unsigned char X;
-		unsigned char Y;
-		unsigned char Z;
+        
+		unsigned char LX;
+        unsigned char HX;
+
+		unsigned char LY;
+        unsigned char HY;
+        
+		unsigned char LZ;
+        unsigned char HZ;
 	};
 }_DATA_BUFFER;
 
@@ -35,9 +41,10 @@ typedef enum
 
 _DATA_BUFFER Data_Buffer;
 
-#define Set_X_DataIntoBuffer(Data) (Data_Buffer.X = Data)
-#define Set_Y_DataIntoBuffer(Data) (Data_Buffer.Y = Data)
-#define Set_Z_DataIntoBuffer(Data) (Data_Buffer.Z = Data)
+#define Set_X_DataIntoBuffer(Data) {Data_Buffer.HX = (Data>>8);Data_Buffer.LX= (Data);}
+#define Set_Y_DataIntoBuffer(Data) {Data_Buffer.HY = (Data>>8);Data_Buffer.LY= (Data);}
+#define Set_Z_DataIntoBuffer(Data) {Data_Buffer.HZ = (Data>>8);Data_Buffer.LZ= (Data);}
+
 #define Set_T_DataIntoBuffer(Data) (Data_Buffer.T = Data)
 #define Set_SwitchStatus_DataIntoBuffer(Data) (Data_Buffer.SwitchStatus = Data)
 #define Set_ID_DataIntoBuffer(Data) (Data_Buffer.ID = Data)

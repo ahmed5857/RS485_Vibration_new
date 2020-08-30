@@ -1,76 +1,4 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"25 ADXL_m.h
-[v _E_Write `(uc ~T0 @X0 0 ef2`i`uc ]
-[v F1551 `(v ~T0 @X0 1 tf1`ul ]
-"154 C:\Program Files (x86)\Microchip\xc8\v1.30\include\pic.h
-[v __delay `JF1551 ~T0 @X0 0 e ]
-[p i __delay ]
-[s S56 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S56 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
-[u S55 `S56 1 ]
-[n S55 . . ]
-"1435 C:\Program Files (x86)\Microchip\xc8\v1.30\include\pic16f882.h
-[v _TRISCbits `VS55 ~T0 @X0 0 e@135 ]
-"1965
-[v _SSPSTAT `Vuc ~T0 @X0 0 e@148 ]
-"745
-[v _SSPCON `Vuc ~T0 @X0 0 e@20 ]
-"1771
-[v _SSPCON2 `Vuc ~T0 @X0 0 e@145 ]
-"1838
-[v _SSPADD `Vuc ~T0 @X0 0 e@147 ]
-[s S18 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S18 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF ]
-[u S17 `S18 1 ]
-[n S17 . . ]
-"457
-[v _PIR1bits `VS17 ~T0 @X0 0 e@12 ]
-[s S20 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S20 . CCP2IF . ULPWUIF BCLIF EEIF C1IF C2IF OSFIF ]
-[u S19 `S20 1 ]
-[n S19 . . ]
-"513
-[v _PIR2bits `VS19 ~T0 @X0 0 e@13 ]
-"3735
-[v _SEN `Vb ~T0 @X0 0 e@1160 ]
-"3619
-[v _PEN `Vb ~T0 @X0 0 e@1162 ]
-"3719
-[v _RSEN `Vb ~T0 @X0 0 e@1161 ]
-"3305
-[v _ACKDT `Vb ~T0 @X0 0 e@1165 ]
-"3307
-[v _ACKEN `Vb ~T0 @X0 0 e@1164 ]
-"739
-[v _SSPBUF `Vuc ~T0 @X0 0 e@19 ]
-"3351
-[v _BF `Vb ~T0 @X0 0 e@1184 ]
-"3701
-[v _RCEN `Vb ~T0 @X0 0 e@1163 ]
-"14 system.h
-[p x FOSC=HS ]
-"15
-[p x WDTE=OFF ]
-"16
-[p x PWRTE=OFF ]
-"17
-[p x MCLRE=OFF ]
-"18
-[p x CP=OFF ]
-"19
-[p x CPD=OFF ]
-"20
-[p x BOREN=OFF ]
-"21
-[p x IESO=OFF ]
-"22
-[p x FCMEN=OFF ]
-"23
-[p x LVP=OFF ]
-"26
-[p x BOR4V=BOR40V ]
-"27
-[p x WRT=OFF ]
 [; ;htc.h: 22: extern void __builtin_software_breakpoint(void);
 [; ;pic16f882.h: 44: extern volatile unsigned char INDF @ 0x000;
 "46 C:\Program Files (x86)\Microchip\xc8\v1.30\include\pic16f882.h
@@ -1485,365 +1413,63 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eeprom_routines.h: 43: extern void eecpymem(volatile unsigned char *to, __eeprom unsigned char *from, unsigned char size);
 [; ;eeprom_routines.h: 44: extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsigned char size);
 [; ;pic.h: 154: extern __nonreentrant void _delay(unsigned long);
-[; ;system.h: 35: void Delay_ms(unsigned char Delay);
-[; ;ADXL_m.h: 14: void I2CInit(void);
-[; ;ADXL_m.h: 15: void I2CStart();
-[; ;ADXL_m.h: 16: void I2CStop();
-[; ;ADXL_m.h: 17: void I2CRestart();
-[; ;ADXL_m.h: 18: void I2CAck();
-[; ;ADXL_m.h: 19: void I2CNak();
-[; ;ADXL_m.h: 20: void I2CWait();
-[; ;ADXL_m.h: 21: void I2CSend(unsigned char dat);
-[; ;ADXL_m.h: 22: unsigned char I2CRead(void);
-[; ;ADXL_m.h: 24: void ini_adxl345(void);
-[; ;ADXL_m.h: 25: char E_Write(int addr, unsigned char ch);
-[; ;ADXL_m.h: 26: unsigned char E_Read(int addr);
-[; ;system.h: 35: void Delay_ms(unsigned char Delay);
-"5 ADXL_m.c
-[v _ini_adxl345 `(v ~T0 @X0 1 ef ]
-"6
-{
-[; ;ADXL_m.c: 5: void ini_adxl345()
-[; ;ADXL_m.c: 6: {
-[e :U _ini_adxl345 ]
-[f ]
-[; ;ADXL_m.c: 7: E_Write(56,0x9f);
-"7
-[e ( _E_Write (2 , -> 56 `i -> -> 159 `i `uc ]
-[; ;ADXL_m.c: 8: _delay((unsigned long)((10)*(20000000/4000.0)));
-"8
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;ADXL_m.c: 9: E_Write(49,0x09);
-"9
-[e ( _E_Write (2 , -> 49 `i -> -> 9 `i `uc ]
-[; ;ADXL_m.c: 10: _delay((unsigned long)((10)*(20000000/4000.0)));
-"10
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;ADXL_m.c: 11: E_Write(44,0x0d);
-"11
-[e ( _E_Write (2 , -> 44 `i -> -> 13 `i `uc ]
-[; ;ADXL_m.c: 12: _delay((unsigned long)((10)*(20000000/4000.0)));
-"12
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;ADXL_m.c: 13: E_Write(45,0x08);
-"13
-[e ( _E_Write (2 , -> 45 `i -> -> 8 `i `uc ]
-[; ;ADXL_m.c: 14: }
+[; ;average_calculations.h: 10: signed long get_x_average( signed long x);
+[; ;average_calculations.h: 11: signed long get_y_average( signed long y);
+[; ;average_calculations.h: 12: signed long get_z_average( signed long z);
+"13 average_calculations.c
+[v _get_x_average `(l ~T0 @X0 1 ef1`l ]
 "14
+{
+[; ;average_calculations.c: 13: signed long get_x_average( signed long x)
+[; ;average_calculations.c: 14: {
+[e :U _get_x_average ]
+"13
+[v _x `l ~T0 @X0 1 r1 ]
+"14
+[f ]
+[; ;average_calculations.c: 15: return x;
+"15
+[e ) _x ]
+[e $UE 135  ]
+[; ;average_calculations.c: 17: }
+"17
 [e :UE 135 ]
 }
-"22
-[v _I2CInit `(v ~T0 @X0 1 ef ]
-"23
+"19
+[v _get_y_average `(l ~T0 @X0 1 ef1`l ]
+"20
 {
-[; ;ADXL_m.c: 22: void I2CInit(void)
-[; ;ADXL_m.c: 23: {
-[e :U _I2CInit ]
+[; ;average_calculations.c: 19: signed long get_y_average( signed long y)
+[; ;average_calculations.c: 20: {
+[e :U _get_y_average ]
+"19
+[v _y `l ~T0 @X0 1 r1 ]
+"20
 [f ]
-[; ;ADXL_m.c: 24: TRISCbits.TRISC3 = 1;
-"24
-[e = . . _TRISCbits 0 3 -> -> 1 `i `uc ]
-[; ;ADXL_m.c: 25: TRISCbits.TRISC4 = 1;
-"25
-[e = . . _TRISCbits 0 4 -> -> 1 `i `uc ]
-[; ;ADXL_m.c: 26: SSPSTAT |= 0x80;
-"26
-[e =| _SSPSTAT -> -> 128 `i `uc ]
-[; ;ADXL_m.c: 27: SSPCON = 0x28;
-"27
-[e = _SSPCON -> -> 40 `i `uc ]
-[; ;ADXL_m.c: 29: SSPCON2 = 0x00;
-"29
-[e = _SSPCON2 -> -> 0 `i `uc ]
-[; ;ADXL_m.c: 30: SSPADD = 49;
-"30
-[e = _SSPADD -> -> 49 `i `uc ]
-[; ;ADXL_m.c: 31: PIR1bits.SSPIF = 0;
-"31
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-[; ;ADXL_m.c: 32: PIR2bits.BCLIF = 0;
-"32
-[e = . . _PIR2bits 0 3 -> -> 0 `i `uc ]
-[; ;ADXL_m.c: 42: }
-"42
+[; ;average_calculations.c: 21: return y;
+"21
+[e ) _y ]
+[e $UE 136  ]
+[; ;average_calculations.c: 22: }
+"22
 [e :UE 136 ]
 }
-"50
-[v _I2CStart `(v ~T0 @X0 1 ef ]
-"51
+"24
+[v _get_z_average `(l ~T0 @X0 1 ef1`l ]
+"25
 {
-[; ;ADXL_m.c: 50: void I2CStart()
-[; ;ADXL_m.c: 51: {
-[e :U _I2CStart ]
+[; ;average_calculations.c: 24: signed long get_z_average( signed long z)
+[; ;average_calculations.c: 25: {
+[e :U _get_z_average ]
+"24
+[v _z `l ~T0 @X0 1 r1 ]
+"25
 [f ]
-[; ;ADXL_m.c: 52: SEN = 1;
-"52
-[e = _SEN -> -> 1 `i `b ]
-[; ;ADXL_m.c: 53: while(SEN);
-"53
-[e $U 138  ]
-[e :U 139 ]
-[e :U 138 ]
-[e $ _SEN 139  ]
-[e :U 140 ]
-[; ;ADXL_m.c: 55: }
-"55
+[; ;average_calculations.c: 26: return z;
+"26
+[e ) _z ]
+[e $UE 137  ]
+[; ;average_calculations.c: 27: }
+"27
 [e :UE 137 ]
-}
-"63
-[v _I2CStop `(v ~T0 @X0 1 ef ]
-"64
-{
-[; ;ADXL_m.c: 63: void I2CStop()
-[; ;ADXL_m.c: 64: {
-[e :U _I2CStop ]
-[f ]
-[; ;ADXL_m.c: 65: PEN = 1;
-"65
-[e = _PEN -> -> 1 `i `b ]
-[; ;ADXL_m.c: 66: while(PEN);
-"66
-[e $U 142  ]
-[e :U 143 ]
-[e :U 142 ]
-[e $ _PEN 143  ]
-[e :U 144 ]
-[; ;ADXL_m.c: 68: }
-"68
-[e :UE 141 ]
-}
-"76
-[v _I2CRestart `(v ~T0 @X0 1 ef ]
-"77
-{
-[; ;ADXL_m.c: 76: void I2CRestart()
-[; ;ADXL_m.c: 77: {
-[e :U _I2CRestart ]
-[f ]
-[; ;ADXL_m.c: 78: RSEN = 1;
-"78
-[e = _RSEN -> -> 1 `i `b ]
-[; ;ADXL_m.c: 79: while(RSEN);
-"79
-[e $U 146  ]
-[e :U 147 ]
-[e :U 146 ]
-[e $ _RSEN 147  ]
-[e :U 148 ]
-[; ;ADXL_m.c: 80: }
-"80
-[e :UE 145 ]
-}
-"88
-[v _I2CAck `(v ~T0 @X0 1 ef ]
-"89
-{
-[; ;ADXL_m.c: 88: void I2CAck()
-[; ;ADXL_m.c: 89: {
-[e :U _I2CAck ]
-[f ]
-[; ;ADXL_m.c: 90: ACKDT = 0;
-"90
-[e = _ACKDT -> -> 0 `i `b ]
-[; ;ADXL_m.c: 91: ACKEN = 1;
-"91
-[e = _ACKEN -> -> 1 `i `b ]
-[; ;ADXL_m.c: 92: while(ACKEN);
-"92
-[e $U 150  ]
-[e :U 151 ]
-[e :U 150 ]
-[e $ _ACKEN 151  ]
-[e :U 152 ]
-[; ;ADXL_m.c: 93: }
-"93
-[e :UE 149 ]
-}
-"101
-[v _I2CNak `(v ~T0 @X0 1 ef ]
-"102
-{
-[; ;ADXL_m.c: 101: void I2CNak()
-[; ;ADXL_m.c: 102: {
-[e :U _I2CNak ]
-[f ]
-[; ;ADXL_m.c: 103: ACKDT = 1;
-"103
-[e = _ACKDT -> -> 1 `i `b ]
-[; ;ADXL_m.c: 104: ACKEN = 1;
-"104
-[e = _ACKEN -> -> 1 `i `b ]
-[; ;ADXL_m.c: 105: while(ACKEN);
-"105
-[e $U 154  ]
-[e :U 155 ]
-[e :U 154 ]
-[e $ _ACKEN 155  ]
-[e :U 156 ]
-[; ;ADXL_m.c: 106: }
-"106
-[e :UE 153 ]
-}
-"114
-[v _I2CWait `(v ~T0 @X0 1 ef ]
-"115
-{
-[; ;ADXL_m.c: 114: void I2CWait()
-[; ;ADXL_m.c: 115: {
-[e :U _I2CWait ]
-[f ]
-[; ;ADXL_m.c: 116: while ((SSPCON2 & 0x1F ) || ( SSPSTAT & 0x04 ) );
-"116
-[e $U 158  ]
-[e :U 159 ]
-[e :U 158 ]
-[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != & -> _SSPSTAT `i -> 4 `i -> 0 `i 159  ]
-[e :U 160 ]
-[; ;ADXL_m.c: 118: }
-"118
-[e :UE 157 ]
-}
-"127
-[v _I2CSend `(v ~T0 @X0 1 ef1`uc ]
-"128
-{
-[; ;ADXL_m.c: 127: void I2CSend(unsigned char dat)
-[; ;ADXL_m.c: 128: {
-[e :U _I2CSend ]
-"127
-[v _dat `uc ~T0 @X0 1 r1 ]
-"128
-[f ]
-[; ;ADXL_m.c: 129: SSPBUF = dat;
-"129
-[e = _SSPBUF _dat ]
-[; ;ADXL_m.c: 130: while(BF);
-"130
-[e $U 162  ]
-[e :U 163 ]
-[e :U 162 ]
-[e $ _BF 163  ]
-[e :U 164 ]
-[; ;ADXL_m.c: 131: I2CWait();
-"131
-[e ( _I2CWait ..  ]
-[; ;ADXL_m.c: 132: }
-"132
-[e :UE 161 ]
-}
-"140
-[v _I2CRead `(uc ~T0 @X0 1 ef ]
-"141
-{
-[; ;ADXL_m.c: 140: unsigned char I2CRead(void)
-[; ;ADXL_m.c: 141: {
-[e :U _I2CRead ]
-[f ]
-"142
-[v _temp `uc ~T0 @X0 1 a ]
-[; ;ADXL_m.c: 142: unsigned char temp;
-[; ;ADXL_m.c: 144: RCEN = 1;
-"144
-[e = _RCEN -> -> 1 `i `b ]
-[; ;ADXL_m.c: 145: while(!BF);
-"145
-[e $U 166  ]
-[e :U 167 ]
-[e :U 166 ]
-[e $ ! _BF 167  ]
-[e :U 168 ]
-[; ;ADXL_m.c: 146: temp = SSPBUF;
-"146
-[e = _temp _SSPBUF ]
-[; ;ADXL_m.c: 147: I2CWait();
-"147
-[e ( _I2CWait ..  ]
-[; ;ADXL_m.c: 148: return temp;
-"148
-[e ) _temp ]
-[e $UE 165  ]
-[; ;ADXL_m.c: 149: }
-"149
-[e :UE 165 ]
-}
-"153
-[v _E_Write `(uc ~T0 @X0 1 ef2`i`uc ]
-"154
-{
-[; ;ADXL_m.c: 153: char E_Write(int addr, unsigned char ch)
-[; ;ADXL_m.c: 154: {
-[e :U _E_Write ]
-"153
-[v _addr `i ~T0 @X0 1 r1 ]
-[v _ch `uc ~T0 @X0 1 r2 ]
-"154
-[f ]
-[; ;ADXL_m.c: 156: I2CStart();
-"156
-[e ( _I2CStart ..  ]
-[; ;ADXL_m.c: 158: I2CSend(0xA6);
-"158
-[e ( _I2CSend (1 -> -> 166 `i `uc ]
-[; ;ADXL_m.c: 160: I2CSend(addr);
-"160
-[e ( _I2CSend (1 -> _addr `uc ]
-[; ;ADXL_m.c: 162: I2CSend(ch);
-"162
-[e ( _I2CSend (1 _ch ]
-[; ;ADXL_m.c: 164: I2CStop();
-"164
-[e ( _I2CStop ..  ]
-[; ;ADXL_m.c: 165: return 1;
-"165
-[e ) -> -> 1 `i `uc ]
-[e $UE 169  ]
-[; ;ADXL_m.c: 166: }
-"166
-[e :UE 169 ]
-}
-"170
-[v _E_Read `(uc ~T0 @X0 1 ef1`i ]
-"171
-{
-[; ;ADXL_m.c: 170: unsigned char E_Read(int addr)
-[; ;ADXL_m.c: 171: {
-[e :U _E_Read ]
-"170
-[v _addr `i ~T0 @X0 1 r1 ]
-"171
-[f ]
-"172
-[v _ch `uc ~T0 @X0 1 a ]
-[; ;ADXL_m.c: 172: unsigned char ch;
-[; ;ADXL_m.c: 174: I2CStart();
-"174
-[e ( _I2CStart ..  ]
-[; ;ADXL_m.c: 176: I2CSend(0xA6);
-"176
-[e ( _I2CSend (1 -> -> 166 `i `uc ]
-[; ;ADXL_m.c: 178: I2CSend(addr);
-"178
-[e ( _I2CSend (1 -> _addr `uc ]
-[; ;ADXL_m.c: 180: I2CRestart();
-"180
-[e ( _I2CRestart ..  ]
-[; ;ADXL_m.c: 182: I2CSend(0xA7);
-"182
-[e ( _I2CSend (1 -> -> 167 `i `uc ]
-[; ;ADXL_m.c: 184: ch = I2CRead();
-"184
-[e = _ch ( _I2CRead ..  ]
-[; ;ADXL_m.c: 185: I2CNak();
-"185
-[e ( _I2CNak ..  ]
-[; ;ADXL_m.c: 186: I2CStop();
-"186
-[e ( _I2CStop ..  ]
-[; ;ADXL_m.c: 187: return ch;
-"187
-[e ) _ch ]
-[e $UE 170  ]
-[; ;ADXL_m.c: 188: }
-"188
-[e :UE 170 ]
 }

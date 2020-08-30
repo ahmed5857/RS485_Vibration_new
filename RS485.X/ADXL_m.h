@@ -10,18 +10,19 @@
 
 #include "ADXL_cfg.h"
 
-void ACC_vidInit(void);
+// Hardware I2C functions
+void I2CInit(void);
+void I2CStart();
+void I2CStop();
+void I2CRestart();
+void I2CAck();
+void I2CNak();
+void I2CWait();
+void I2CSend(unsigned char dat);
+unsigned char I2CRead(void);
 
-void I2C_Master_Init(void);
-void I2C_Start(void);
-void I2C_Stop(void);
-void I2C_Restart(void);
-void I2C_ACK(void);
-void I2C_NACK(void);
-void I2C_Wait(void);
-unsigned char I2C_Write(unsigned char Data);
-unsigned char I2C_Read_Byte(void);
-
-
+void ini_adxl345(void);
+char E_Write(int addr, unsigned char ch);
+unsigned char E_Read(int addr);
 #endif	/* ADXL_M_H */
 

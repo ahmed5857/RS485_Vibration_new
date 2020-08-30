@@ -9,7 +9,7 @@ void UART_vidSend(unsigned char* const data,const unsigned short Len);
 void UART_vidReceive(unsigned char* data);
 
 unsigned char UART_u8GetNodeID(void);
-/* Hello Mr Deep */
+
 
 void UART_vidInit(void)
 {
@@ -55,11 +55,11 @@ void RS845_ManageState(void)
         /* Do nothing */
     }
 }
-void UART_vidSend(unsigned char* const data,const unsigned short Length)
+void UART_vidSend(unsigned char* const data,const unsigned short Len)
 {
     unsigned short UART_u16Index = 0;
 
-	for(UART_u16Index = 0; UART_u16Index < Length; UART_u16Index++)
+	for(UART_u16Index = 0; UART_u16Index < Len; UART_u16Index++)
 	{
         while(PIR1bits.TXIF == 0);
         TXREG = data[UART_u16Index];

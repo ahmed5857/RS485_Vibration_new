@@ -3,41 +3,155 @@
 [d edition pro ]
 [d chip 16F882 ]
 [d frameptr 6 ]
-"31 E:\Companies\freelancer\Rspos\Smartech\RS485_Vibration\RS485.X\ADXL_m.c
-[v _I2C_IDLE I2C_IDLE `(v  1 e 1 0 ]
-"36
-[v _I2C_Master_Init I2C_Master_Init `(v  1 e 1 0 ]
-"46
-[v _I2C_Start I2C_Start `(v  1 e 1 0 ]
-"52
-[v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
-"77
-[v _I2C_Write I2C_Write `(uc  1 e 1 0 ]
-"93
-[v _I2C_Wait I2C_Wait `(v  1 e 1 0 ]
-"62 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\float.c
+"5 C:\Users\Ahmed GEE\Desktop\RS485_Vibration\RS485.X\ADXL_m.c
+[v _ini_adxl345 ini_adxl345 `(v  1 e 0 0 ]
+"22
+[v _I2CInit I2CInit `(v  1 e 0 0 ]
+"50
+[v _I2CStart I2CStart `(v  1 e 0 0 ]
+"63
+[v _I2CStop I2CStop `(v  1 e 0 0 ]
+"76
+[v _I2CRestart I2CRestart `(v  1 e 0 0 ]
+"88
+[v _I2CAck I2CAck `(v  1 e 0 0 ]
+"101
+[v _I2CNak I2CNak `(v  1 e 0 0 ]
+"114
+[v _I2CWait I2CWait `(v  1 e 0 0 ]
+"127
+[v _I2CSend I2CSend `(v  1 e 0 0 ]
+"140
+[v _I2CRead I2CRead `(uc  1 e 1 0 ]
+"153
+[v _E_Write E_Write `(uc  1 e 1 0 ]
+"170
+[v _E_Read E_Read `(uc  1 e 1 0 ]
+"13 C:\Users\Ahmed GEE\Desktop\RS485_Vibration\RS485.X\average_calculations.c
+[v _get_x_average get_x_average `(l  1 e 4 0 ]
+"19
+[v _get_y_average get_y_average `(l  1 e 4 0 ]
+"24
+[v _get_z_average get_z_average `(l  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\abdiv.c
+[v ___abdiv __abdiv `(c  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\abmod.c
+[v ___abmod __abmod `(c  1 e 1 0 ]
+"33 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\abtoft.c
+[v ___abtoft __abtoft `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+"42 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\altoft.c
+[v ___altoft __altoft `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\atdiv.c
+[v ___atdiv __atdiv `(m  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\atmod.c
+[v ___atmod __atmod `(m  1 e 3 0 ]
+"37 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\attoft.c
+[v ___attoft __attoft `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"32 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"2 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\bmul.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
-"86 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\ftadd.c
+"86 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
-"6 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\pic\eeprom.c
-[v _eecpymem eecpymem `(v  1 e 1 0 ]
-"39
-[v _memcpyee memcpyee `(v  1 e 1 0 ]
-"13 E:\Companies\freelancer\Rspos\Smartech\RS485_Vibration\RS485.X\main.c
-[v _main main `(v  1 e 1 0 ]
-"30
-[v _system_init system_init `(v  1 e 1 0 ]
-"14 E:\Companies\freelancer\Rspos\Smartech\RS485_Vibration\RS485.X\UART_m.c
-[v _UART_vidInit UART_vidInit `(v  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"51 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"18 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"27 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"35 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+"2 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lmul.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\ltdiv.c
+[v ___ltdiv __ltdiv `(um  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\ltmod.c
+[v ___ltmod __ltmod `(um  1 e 3 0 ]
+"30 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lttoft.c
+[v ___lttoft __lttoft `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"28 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"2 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\tmul.c
+[v ___tmul __tmul `(um  1 e 3 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\wmul.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 0 0 ]
+"24
+[v _memcpyee memcpyee `(v  1 e 0 0 ]
+"48
+[v ___eetoc __eetoc `(uc  1 e 1 0 ]
+"56
+[v ___eetoi __eetoi `(ui  1 e 2 0 ]
+"64
+[v ___eetom __eetom `(um  1 e 3 0 ]
+"72
+[v ___eetol __eetol `(ul  1 e 4 0 ]
+"80
+[v ___ctoee __ctoee `(uc  1 e 1 0 ]
+"87
+[v ___itoee __itoee `(ui  1 e 2 0 ]
+"94
+[v ___mtoee __mtoee `(um  1 e 3 0 ]
+"101
+[v ___ltoee __ltoee `(ul  1 e 4 0 ]
+"108
+[v ___eetoft __eetoft `(f  1 e 3 0 ]
+"116
+[v ___eetofl __eetofl `(d  1 e 3 0 ]
+"124
+[v ___fttoee __fttoee `(f  1 e 3 0 ]
+"131
+[v ___fltoee __fltoee `(d  1 e 3 0 ]
+"49 C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"16 C:\Users\Ahmed GEE\Desktop\RS485_Vibration\RS485.X\main.c
+[v _UART_Write UART_Write `(v  1 e 0 0 ]
+"22
+[v _UART_Write_String UART_Write_String `(v  1 e 0 0 ]
 "31
-[v _UART_vidNewDataReceived UART_vidNewDataReceived `II(v  1 e 1 0 ]
+[v _system_init system_init `(v  1 e 0 0 ]
+"40
+[v _main main `(v  1 e 0 0 ]
+"14 C:\Users\Ahmed GEE\Desktop\RS485_Vibration\RS485.X\UART_m.c
+[v _UART_vidInit UART_vidInit `(v  1 e 0 0 ]
+"31
+[v _UART_vidNewDataReceived UART_vidNewDataReceived `II(v  1 e 0 0 ]
 "47
-[v _RS845_ManageState RS845_ManageState `(v  1 e 1 0 ]
+[v _RS845_ManageState RS845_ManageState `(v  1 e 0 0 ]
 "58
-[v _UART_vidSend UART_vidSend `(v  1 e 1 0 ]
+[v _UART_vidSend UART_vidSend `(v  1 e 0 0 ]
 "70
 [v _UART_u8GetNodeID UART_u8GetNodeID `(uc  1 e 1 0 ]
-[s S102 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S199 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -45,98 +159,175 @@
 `uc 1 RCIF 1 0 :1:5 
 `uc 1 ADIF 1 0 :1:6 
 ]
-"460 C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic16f882.h
-[u S110 . 1 `S102 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES110  1 e 1 @12 ]
-"742
-[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
-"748
-[v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
-"1025
-[v _TXREG TXREG `VEuc  1 e 1 @25 ]
-"1031
-[v _RCREG RCREG `VEuc  1 e 1 @26 ]
-"1130
-[v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
-"1299
-[v _TRISA TRISA `VEuc  1 e 1 @133 ]
-"1774
-[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
-[s S165 . 1 `uc 1 SEN 1 0 :1:0 
-`uc 1 RSEN 1 0 :1:1 
-`uc 1 PEN 1 0 :1:2 
-`uc 1 RCEN 1 0 :1:3 
-`uc 1 ACKEN 1 0 :1:4 
-`uc 1 ACKDT 1 0 :1:5 
-`uc 1 ACKSTAT 1 0 :1:6 
-`uc 1 GCEN 1 0 :1:7 
+"457 C:\Program Files (x86)\Microchip\xc8\v1.30\include\pic16f882.h
+[u S207 . 1 `S199 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES207  1 e 1 @12 ]
+[s S247 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
 ]
-"1791
-[u S174 . 1 `S165 1 . 1 0 ]
-[v _SSPCON2bits SSPCON2bits `VES174  1 e 1 @145 ]
-"1841
+"513
+[u S256 . 1 `S247 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES256  1 e 1 @13 ]
+"739
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+"745
+[v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
+"1022
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1028
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
+"1127
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
+"1296
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1435
+[v _TRISCbits TRISCbits `VES256  1 e 1 @135 ]
+"1771
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
+"1838
 [v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
-"1968
+"1965
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
-"2428
+"2425
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
-"3156
+"3017
+[v _EEDATA EEDATA `VEuc  1 e 1 @268 ]
+"3028
+[v _EEADR EEADR `VEuc  1 e 1 @269 ]
+"3153
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
-"3312
-[v _ACKSTAT ACKSTAT `VEb  1 e 0 @1166 ]
-"3390
+"3245
+[v _EECON1 EECON1 `VEuc  1 e 1 @396 ]
+"3289
+[v _EECON2 EECON2 `VEuc  1 e 1 @397 ]
+"3305
+[v _ACKDT ACKDT `VEb  1 e 0 @1165 ]
+"3307
+[v _ACKEN ACKEN `VEb  1 e 0 @1164 ]
+"3351
+[v _BF BF `VEb  1 e 0 @1184 ]
+"3387
 [v _BRGH BRGH `VEb  1 e 0 @1218 ]
-"3484
+"3435
+[v _CARRY CARRY `VEb  1 e 0 @24 ]
+"3481
 [v _CREN CREN `VEb  1 e 0 @196 ]
-"3524
+"3521
 [v _GIE GIE `VEb  1 e 0 @95 ]
-"3620
+"3617
 [v _PEIE PEIE `VEb  1 e 0 @94 ]
-"3682
+"3619
+[v _PEN PEN `VEb  1 e 0 @1162 ]
+"3679
 [v _RC0 RC0 `VEb  1 e 0 @56 ]
-"3708
+"3701
+[v _RCEN RCEN `VEb  1 e 0 @1163 ]
+"3705
 [v _RCIE RCIE `VEb  1 e 0 @1125 ]
-"3710
+"3707
 [v _RCIF RCIF `VEb  1 e 0 @101 ]
-"3744
+"3709
+[v _RD RD `VEb  1 e 0 @3168 ]
+"3719
+[v _RSEN RSEN `VEb  1 e 0 @1161 ]
+"3735
+[v _SEN SEN `VEb  1 e 0 @1160 ]
+"3741
 [v _SPEN SPEN `VEb  1 e 0 @199 ]
-"3756
-[v _SSPIF SSPIF `VEb  1 e 0 @99 ]
-"3780
+"3777
 [v _SYNC SYNC `VEb  1 e 0 @1220 ]
-"3870
+"3867
 [v _TRISC0 TRISC0 `VEb  1 e 0 @1080 ]
-"3876
-[v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
-"3878
-[v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
-"3882
+"3879
 [v _TRISC6 TRISC6 `VEb  1 e 0 @1086 ]
-"3884
+"3881
 [v _TRISC7 TRISC7 `VEb  1 e 0 @1087 ]
-"3908
+"3885
+[v _TRMT TRMT `VEb  1 e 0 @1217 ]
+"3905
 [v _TXEN TXEN `VEb  1 e 0 @1221 ]
-"13 E:\Companies\freelancer\Rspos\Smartech\RS485_Vibration\RS485.X\UART_m.h
+"3965
+[v _WR WR `VEb  1 e 0 @3169 ]
+"3967
+[v _WREN WREN `VEb  1 e 0 @3170 ]
+"5 C:\Users\Ahmed GEE\Desktop\RS485_Vibration\RS485.X\UART_m.c
+[v _RECEIVED_ECU_ID RECEIVED_ECU_ID `[1]uc  1 e 1 0 ]
+"13 C:\Users\Ahmed GEE\Desktop\RS485_Vibration\RS485.X\UART_m.h
 [v _ECU_ID ECU_ID `uc  1 e 1 0 ]
-[s S19 . 6 `uc 1 ID 1 0 :7:0 
+[s S19 . 9 `uc 1 ID 1 0 :7:0 
 `uc 1 SwitchStatus 1 0 :1:7 
 `uc 1 AVG_Vibration 1 1 :8:0 
-`uc 1 T 1 2 `uc 1 X 1 3 `uc 1 Y 1 4 `uc 1 Z 1 5 ]
-"36
-[u S27 . 6 `[6]uc 1 DATA_BUFFER 6 0 `S19 1 . 6 0 ]
-[v _Data_Buffer Data_Buffer `S27  1 e 6 0 ]
-"13 E:\Companies\freelancer\Rspos\Smartech\RS485_Vibration\RS485.X\main.c
-[v _main main `(v  1 e 1 0 ]
+`uc 1 T 1 2 `uc 1 LX 1 3 `uc 1 HX 1 4 `uc 1 LY 1 5 `uc 1 HY 1 6 `uc 1 LZ 1 7 `uc 1 HZ 1 8 ]
+"42
+[u S30 . 9 `[9]uc 1 DATA_BUFFER 9 0 `S19 1 . 9 0 ]
+[v _Data_Buffer Data_Buffer `S30  1 e 9 0 ]
+"40 C:\Users\Ahmed GEE\Desktop\RS485_Vibration\RS485.X\main.c
+[v _main main `(v  1 e 0 0 ]
 {
-"28
+"45
+[v main@Zaccumulate Zaccumulate `l  1 a 4 55 ]
+[v main@Yaccumulate Yaccumulate `l  1 a 4 51 ]
+[v main@Xaccumulate Xaccumulate `l  1 a 4 47 ]
+"44
+[v main@zlo zlo `l  1 a 4 37 ]
+[v main@zhi zhi `l  1 a 4 33 ]
+[v main@ylo ylo `l  1 a 4 29 ]
+[v main@yhi yhi `l  1 a 4 25 ]
+[v main@xlo xlo `l  1 a 4 21 ]
+[v main@xhi xhi `l  1 a 4 17 ]
+"42
+[v main@bw_rate bw_rate `i  1 a 2 45 ]
+[v main@pow pow `i  1 a 2 43 ]
+[v main@id id `i  1 a 2 41 ]
+"46
+[v main@Zaverage Zaverage `uc  1 a 1 16 ]
+[v main@Yaverage Yaverage `uc  1 a 1 15 ]
+[v main@Xaverage Xaverage `uc  1 a 1 14 ]
+"127
 } 0
-"30
-[v _system_init system_init `(v  1 e 1 0 ]
+"31
+[v _system_init system_init `(v  1 e 0 0 ]
 {
-"36
+"37
 } 0
-"14 E:\Companies\freelancer\Rspos\Smartech\RS485_Vibration\RS485.X\UART_m.c
-[v _UART_vidInit UART_vidInit `(v  1 e 1 0 ]
+"5 C:\Users\Ahmed GEE\Desktop\RS485_Vibration\RS485.X\ADXL_m.c
+[v _ini_adxl345 ini_adxl345 `(v  1 e 0 0 ]
+{
+"14
+} 0
+"153
+[v _E_Write E_Write `(uc  1 e 1 0 ]
+{
+[v E_Write@addr addr `i  1 p 2 1 ]
+[v E_Write@ch ch `uc  1 p 1 3 ]
+"166
+} 0
+"24 C:\Users\Ahmed GEE\Desktop\RS485_Vibration\RS485.X\average_calculations.c
+[v _get_z_average get_z_average `(l  1 e 4 0 ]
+{
+[v get_z_average@z z `l  1 p 4 0 ]
+"27
+} 0
+"19
+[v _get_y_average get_y_average `(l  1 e 4 0 ]
+{
+[v get_y_average@y y `l  1 p 4 0 ]
+"22
+} 0
+"13
+[v _get_x_average get_x_average `(l  1 e 4 0 ]
+{
+[v get_x_average@x x `l  1 p 4 0 ]
+"17
+} 0
+"14 C:\Users\Ahmed GEE\Desktop\RS485_Vibration\RS485.X\UART_m.c
+[v _UART_vidInit UART_vidInit `(v  1 e 0 0 ]
 {
 "29
 } 0
@@ -145,25 +336,93 @@
 {
 "73
 } 0
-"31
-[v _UART_vidNewDataReceived UART_vidNewDataReceived `II(v  1 e 1 0 ]
+"16 C:\Users\Ahmed GEE\Desktop\RS485_Vibration\RS485.X\main.c
+[v _UART_Write UART_Write `(v  1 e 0 0 ]
+{
+[v UART_Write@data data `uc  1 a 1 wreg ]
+[v UART_Write@data data `uc  1 a 1 wreg ]
+[v UART_Write@data data `uc  1 a 1 0 ]
+"20
+} 0
+"22 C:\Users\Ahmed GEE\Desktop\RS485_Vibration\RS485.X\ADXL_m.c
+[v _I2CInit I2CInit `(v  1 e 0 0 ]
+{
+"42
+} 0
+"88
+[v _I2CAck I2CAck `(v  1 e 0 0 ]
+{
+"93
+} 0
+"170
+[v _E_Read E_Read `(uc  1 e 1 0 ]
+{
+"172
+[v E_Read@ch ch `uc  1 a 1 5 ]
+"170
+[v E_Read@addr addr `i  1 p 2 2 ]
+"188
+} 0
+"63
+[v _I2CStop I2CStop `(v  1 e 0 0 ]
+{
+"68
+} 0
+"50
+[v _I2CStart I2CStart `(v  1 e 0 0 ]
+{
+"55
+} 0
+"127
+[v _I2CSend I2CSend `(v  1 e 0 0 ]
+{
+[v I2CSend@dat dat `uc  1 a 1 wreg ]
+[v I2CSend@dat dat `uc  1 a 1 wreg ]
+"129
+[v I2CSend@dat dat `uc  1 a 1 0 ]
+"132
+} 0
+"76
+[v _I2CRestart I2CRestart `(v  1 e 0 0 ]
+{
+"80
+} 0
+"140
+[v _I2CRead I2CRead `(uc  1 e 1 0 ]
+{
+"142
+[v I2CRead@temp temp `uc  1 a 1 1 ]
+"149
+} 0
+"114
+[v _I2CWait I2CWait `(v  1 e 0 0 ]
+{
+"118
+} 0
+"101
+[v _I2CNak I2CNak `(v  1 e 0 0 ]
+{
+"106
+} 0
+"31 C:\Users\Ahmed GEE\Desktop\RS485_Vibration\RS485.X\UART_m.c
+[v _UART_vidNewDataReceived UART_vidNewDataReceived `II(v  1 e 0 0 ]
 {
 "45
 } 0
 "47
-[v _RS845_ManageState RS845_ManageState `(v  1 e 1 0 ]
+[v _RS845_ManageState RS845_ManageState `(v  1 e 0 0 ]
 {
 "57
 } 0
 "58
-[v _UART_vidSend UART_vidSend `(v  1 e 1 0 ]
+[v _UART_vidSend UART_vidSend `(v  1 e 0 0 ]
 {
 [v UART_vidSend@data data `DCC*.4uc  1 a 1 wreg ]
 "60
 [v UART_vidSend@UART_u16Index UART_u16Index `us  1 a 2 4 ]
 "58
 [v UART_vidSend@data data `DCC*.4uc  1 a 1 wreg ]
-[v UART_vidSend@Length Length `DCCus  1 p 2 0 ]
+[v UART_vidSend@Len Len `DCCus  1 p 2 0 ]
 "60
 [v UART_vidSend@data data `DCC*.4uc  1 a 1 3 ]
 "68

@@ -21,6 +21,8 @@
       <itemPath>ADXL_m.c</itemPath>
       <itemPath>ADXL_cfg.h</itemPath>
       <itemPath>System.c</itemPath>
+      <itemPath>average_calculations.c</itemPath>
+      <itemPath>average_calculations.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -41,7 +43,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>Simulator</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>1.41</languageToolchainVersion>
+        <languageToolchainVersion>1.30</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>

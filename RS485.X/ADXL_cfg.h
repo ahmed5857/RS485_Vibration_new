@@ -8,21 +8,19 @@
 #define	ADXL_CFG_H
 #include "system.h"
 
-#define ACCEL_ADDRESS  0xA6 
-/***************zone Accelemoter************/
-#define ADD_X_LOW         0x32
-#define ADD_X_HIG         0x33
-#define ADD_Y_LOW         0x34
-#define ADD_Y_HIG         0x35
-#define ADD_Z_LOW         0x36
-#define ADD_Z_HIG         0x37
-
-#define ADD_POWER_CTL      0x2D
-#define ADD_DATA_FORMAT    0x31
-#define ADD_BW_RATE        0x2C
-
-
-#define I2C_SPEED          100000
+#define  BW_RATE            44    //0x2C
+#define  POWER_CTL          45    //0x2D
+#define  DATA_FORMAT        49    //0x31
+#define  DATAX0             50    //0x32
+#define  DATAX1             51    //0x33
+#define  DATAY0             52    //0x34
+#define  DATAY1             53    //0x35
+#define  DATAZ0             54    //0x36
+#define  DATAZ1             55    //0x37
+#define  FIFO_CTL           56    //0x38            ADXL1345    1010011   0x53   Device
+#define CHIP_Write    0xA6        // adxl345 address for writing    10100110  0xA6   Write
+#define CHIP_Read    0xA7        // and reading                    10100111  0xA7   Read
+#define  IDDV 0
 
 
 #endif	/* ADXL_CFG_H */

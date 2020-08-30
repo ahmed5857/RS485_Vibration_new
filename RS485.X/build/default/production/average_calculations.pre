@@ -1,22 +1,5 @@
 
-# 1 "ADXL_m.c"
-
-
-# 14 "system.h"
-#pragma config FOSC = HS
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LVP = OFF
-
-
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
+# 1 "average_calculations.c"
 
 
 # 21 "C:\Program Files (x86)\Microchip\xc8\v1.30\include\htc.h"
@@ -1998,173 +1981,24 @@ extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsi
 #pragma intrinsic(_delay)
 extern __nonreentrant void _delay(unsigned long);
 
-# 35 "system.h"
-void Delay_ms(unsigned char Delay);
+# 10 "average_calculations.h"
+signed long get_x_average( signed long x);
+signed long get_y_average( signed long y);
+signed long get_z_average( signed long z);
 
-# 14 "ADXL_m.h"
-void I2CInit(void);
-void I2CStart();
-void I2CStop();
-void I2CRestart();
-void I2CAck();
-void I2CNak();
-void I2CWait();
-void I2CSend(unsigned char dat);
-unsigned char I2CRead(void);
-
-void ini_adxl345(void);
-char E_Write(int addr, unsigned char ch);
-unsigned char E_Read(int addr);
-
-
-# 14 "system.h"
-#pragma config FOSC = HS
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LVP = OFF
-
-
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
-
-# 35
-void Delay_ms(unsigned char Delay);
-
-# 5 "ADXL_m.c"
-void ini_adxl345()
+# 13 "average_calculations.c"
+signed long get_x_average( signed long x)
 {
-E_Write(56,0x9f);
-_delay((unsigned long)((10)*(20000000/4000.0)));
-E_Write(49,0x09);
-_delay((unsigned long)((10)*(20000000/4000.0)));
-E_Write(44,0x0d);
-_delay((unsigned long)((10)*(20000000/4000.0)));
-E_Write(45,0x08);
-}
-
-# 22
-void I2CInit(void)
-{
-TRISCbits.TRISC3 = 1;
-TRISCbits.TRISC4 = 1;
-SSPSTAT |= 0x80;
-SSPCON = 0x28;
-
-SSPCON2 = 0x00;
-SSPADD = 49;
-PIR1bits.SSPIF = 0;
-PIR2bits.BCLIF = 0;
-
-# 42
-}
-
-# 50
-void I2CStart()
-{
-SEN = 1;
-while(SEN);
+return x;
 
 }
 
-# 63
-void I2CStop()
+signed long get_y_average( signed long y)
 {
-PEN = 1;
-while(PEN);
-
+return y;
 }
 
-# 76
-void I2CRestart()
+signed long get_z_average( signed long z)
 {
-RSEN = 1;
-while(RSEN);
-}
-
-# 88
-void I2CAck()
-{
-ACKDT = 0;
-ACKEN = 1;
-while(ACKEN);
-}
-
-# 101
-void I2CNak()
-{
-ACKDT = 1;
-ACKEN = 1;
-while(ACKEN);
-}
-
-# 114
-void I2CWait()
-{
-while ((SSPCON2 & 0x1F ) || ( SSPSTAT & 0x04 ) );
-
-}
-
-# 127
-void I2CSend(unsigned char dat)
-{
-SSPBUF = dat;
-while(BF);
-I2CWait();
-}
-
-# 140
-unsigned char I2CRead(void)
-{
-unsigned char temp;
-
-RCEN = 1;
-while(!BF);
-temp = SSPBUF;
-I2CWait();
-return temp;
-}
-
-
-
-char E_Write(int addr, unsigned char ch)
-{
-
-I2CStart();
-
-I2CSend(0xA6);
-
-I2CSend(addr);
-
-I2CSend(ch);
-
-I2CStop();
-return 1;
-}
-
-
-
-unsigned char E_Read(int addr)
-{
-unsigned char ch;
-
-I2CStart();
-
-I2CSend(0xA6);
-
-I2CSend(addr);
-
-I2CRestart();
-
-I2CSend(0xA7);
-
-ch = I2CRead();
-I2CNak();
-I2CStop();
-return ch;
+return z;
 }
